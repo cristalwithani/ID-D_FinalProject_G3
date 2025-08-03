@@ -8,8 +8,62 @@
 </head>
 <body>
 <!-- Add code here -->
+<!-- Beginning of code -->
+<!html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Buzz</title>
+</head>
+<body>
+  <header>
+    <h1>Smart Buzz</h1>
+    <nav>
+      <button onclick="showPage('inbox')">Inbox</button>
+      <button onclick="showPage('filters')">Filters</button>
+      <button onclick="showPage('dnd')">DND Mode</button>
+    </nav>
+  </header>
 
+  <main>
+    <!-- Inbox Section -->
+    <section id="inbox" class="page">
+      <h2>Notification center</h2>
+      <p>Here are your latest notifications from today:</p>
+      <div class="message"data-category="work"> Groupme: Bryan: Hey, don’t forget the group project meeting at 5 PM!</div>
+      <div class="message" data-category="work"> Email: Kelly: Can we review tomorrow’s class notes?</div>
+      <div class="message" data-category="work"> Haley: Reminder: Work shift tomorrow morning!</div>
+      <div class="message" data-category="family"> Message: Babe: Honey can you get some papertowels and plastic cups on your way home plz!</div>
+      <div class="message" data-category="family"> Message: Mom: Dont forget your brother is hosting his housewarming on Friday!</div>
+      <div class="message" data-category="work"> Email: Manager: Whats the status on the files that we need for next weeks meeting?</div>
+      <div class="message" data-category="friend"> Message: Kyle: Hey do you want to go to the bar with the gang after we all get off of work?</div>
+      <div class="message" data-category="friend"> Message: Toya: Hey what time is your brother's housewarming starting?</div>
+      <div class="message" data-category="friends"> Groupchat: Krusty Krab Crew: Kayla: We should plan a group trip next month</div>
+      <div class="message" data-category="friends"> Groupchat: Krusty Krab Crew: Toya: Ooo that sounds fun!</div>
+      <div class="message" data-category="friends"> Groupchat: Krusty Krab Crew: Anthony: I'm down what days were we thinking?</div>
+    </section>
 
+    <!-- Filters Section -->
+    <section id="filters" class="page hidden">
+  <h2>Message Filters</h2>
+  <p>Select filters to sort your messages:</p>
+  <button onclick="filterMessages('all')">Show All</button>
+  <button onclick="filterMessages('work')">Work</button>
+  <button onclick="filterMessages('friends')">Friends</button>
+  <button onclick="filterMessages('family')">Family</button>
+</section>
+    <!-- DND Mode Section -->
+    <section id="dnd" class="page hidden">
+  <h2>Do Not Disturb</h2>
+  <p>Enable custom DND to focus without distractions.</p>
+  <button onclick="enableDND()">Enable DND</button>
+  <button onclick="disableDND()">Disable DND</button>
+</section>
+  </main>
+</body>
+</html>
+<!-- End of code -->
 
 
 
