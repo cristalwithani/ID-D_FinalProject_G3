@@ -1,42 +1,52 @@
 /* Beginning of code */
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(section => {
-    section.classList.add('hidden');
-  });
-  document.getElementById(pageId).classList.remove('hidden');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f9f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-function filterMessages(category) {
-  const messages = document.querySelectorAll("#inbox .message");
-
-  messages.forEach(msg => {
-    if (category === "all") {
-      msg.style.display = "block";
-    } else if (msg.dataset.category === category) {
-      msg.style.display = "block";
-    } else {
-      msg.style.display = "none";
-    }
-  });
-
-  // Switch to inbox so user can see results
-  showPage("inbox");
-}
-let dndEnabled = false;
-
-function enableDND() {
-  dndEnabled = true;
-  const messages = document.querySelectorAll("#inbox .message");
-  messages.forEach(msg => msg.style.display = "none");
-  alert("DND Enabled: All messages hidden.");
-  showPage("inbox");
+header {
+  background-color: #0077b6; /* Blue */
+  color: white;
+  padding: 15px;
 }
 
-function disableDND() {
-  dndEnabled = false;
-  const messages = document.querySelectorAll("#inbox .message");
-  messages.forEach(msg => msg.style.display = "block");
-  alert("DND Disabled: All messages visible.");
-  showPage("inbox");
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #2e6645; /* Green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+nav button:hover {
+  background-color: #00796b;
+}
+
+h1, h2 {
+  margin: 10px 0;
+}
+
+.page {
+  display: block;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  background-color: #62bd97;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  border-radius: 5px;
 }
 /* End of code */ 
+
