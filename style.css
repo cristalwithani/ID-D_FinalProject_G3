@@ -1,5 +1,3 @@
-/* Beginning of code */
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f9f9;
@@ -48,5 +46,29 @@ h1, h2 {
   width: 80%;
   border-radius: 5px;
 }
-/* End of code */ 
 
+/* Container that holds the entire header */
+.main-header {
+  display: flex;
+  justify-content: center;   /* center the logo+title group horizontally */
+  padding: 20px 0;
+}
+
+/* Holds the logo and title side-by-side */
+.header-content {
+  display: flex;
+  align-items: center;       /* align logo and text vertically */
+  gap: 15px;                 /* space between logo and title */
+}
+
+/* Logo styling */
+.logo {
+  width: 60px;               /* adjust size as needed */
+  height: auto;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  margin: 0;
+}
